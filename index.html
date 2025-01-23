@@ -5,175 +5,243 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
+      /* Global Reset */
       * {
-	  box-sizing: border-box;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
       }
 
       body {
-	  background-color: white;
+        font-family: 'Arial', sans-serif;
+        background: linear-gradient(135deg, #e8f1f8, #fdfdfd);
+        color: #333;
+        line-height: 1.6;
+        margin: 0;
       }
-	  	  
+
       header {
-	  background-color: white;
-	  text-align: left;
-	  font-size: 35px;
-	  color: #ff280d;
-	  font-family: Verdana, sans-serif;
-      }
-      
-      /* Style the list inside the menu */
-      nav ul {
-	  list-style-type: none;
-	  
-	  padding: 0;
+        text-align: center;
+        padding: 20px 0;
+        background: linear-gradient(to right, #ff280d, #ff6b6b);
+        color: white;
+        font-size: 2rem;
+        font-weight: bold;
       }
 
-      article {
-	  float: right;
-	  padding: 20px;
-	  width: 50%;
-	  background-color: #c2dbf4ff;
-	  height: 1500px; /* only for demonstration, should be removed */
-	  color: #ff280d;
-      }
-
-      
-      /* Create two columns/boxes that floats next to each other */
+      /* Navigation Section */
       nav {
-	  font-family: "Times New Roman", Times, serif;
-	  float: left;
-	  width: 50%;
-	  height: 1500px; /* only for demonstration, should be removed */
-	  background: white;
-	  padding: 20px;
-	  color: #ff280d;
-	  font-size: 70px;
+        width: 80%;
+        margin: 30px auto;
+        padding: 20px;
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
       }
 
-      pic {
-	  text-align: center;
-	  background-color: #c2dbf4ff;
-	  padding: 20px;  
+      nav p {
+        font-size: 1.2rem;
+        margin: 10px 0;
       }
 
-      img {
-	  border-radius: 10%;
+      nav .cta-button {
+        display: inline-block;
+        background: #ff280d;
+        color: white;
+        font-size: 1.5rem;
+        padding: 15px 30px;
+        margin-top: 20px;
+        border-radius: 25px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: all 0.3s ease-in-out;
       }
 
-      /*Create button to go to the quiz */
-      .button {
-	  background-color: #ff280d;
-	  border: none;
-	  font-size: 40px;
-	  font-family: "Times New Roman", Times, serif;
-	  color: white;
-	  padding: 10px 40px;
-	  text-align: center;
-	  display: inline-block;
-	  margin: 4px 2px;
-	  cursor: pointer;
-	  border-radius: 30px;
-	  transition-duration: 0.4s;
-      }
-      
-      .button:hover {
-	  background-color:purple;
-	  color: white;
+      nav .cta-button:hover {
+        background: #9300e6;
+        transform: translateY(-3px);
       }
 
-      .btn {
-	  border: none;
-	  background-color: #c2dbf4ff;
-	  font-family: Verdana, sans-serif;
-	  padding: 14px 28px;
-	  font-size: 16px;
-	  cursor: pointer;
-	  display: inline-block;
-	  font-size: 25px;
-	  float: right;
+      /* Features Section */
+      .features {
+        width: 80%;
+        margin: 30px auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: white;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       }
-      
-      /*Create buttons to for other pages */
-      .aboutus {
-	  color: #ff280d;
+
+      .feature-text {
+        flex: 2;
+        margin-right: 20px;
       }
-      
-      .aboutus:hover {
-	  background-color: purple;
-	  transition-duration: 0.4s;
-	  cursor: pointer;  
-	  color: white;
+
+      .feature-text .feature {
+        text-align: center;
+        margin-bottom: 20px;
       }
-      
-      .git {
-	  color: #ff280d;
+
+      .feature-text i {
+        font-size: 2.5rem;
+        color: #ff280d;
+        margin-bottom: 10px;
       }
-      
-      .git:hover {
-	  background: purple;
-	  color: white;
-	  transition-duration: 0.4s;
-	  cursor: pointer;  
+
+      .feature-text h3 {
+        font-size: 1.5rem;
+        color: #333;
+        margin-bottom: 10px;
       }
-      
-      .team {
-	  color: #ff280d;
+
+      .feature-text p {
+        font-size: 1rem;
+        color: #666;
       }
-      
-      .team:hover {
-	  background: purple;
-	  color: white;
-	  transition-duration: 0.4s;
-	  cursor: pointer;  
+
+      .feature-image {
+        flex: 1;
+        text-align: center;
       }
-      
-      /* Clear floats after the columns */
-      section::after {
-	  content: "";
-	  display: table;
-	  clear: both;
+
+      .feature-image img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       }
-      
-      /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
-      @media (max-width: 600px) {
-	  nav, article {
-	      width: 100%;
-	      height: auto;
-	  }
+
+      /* Button Group Section */
+      .btn-group {
+        text-align: right;
+        margin: 20px auto;
+        width: 80%;
+      }
+
+      .btn-group .btn {
+        font-size: 1rem;
+        color: #ff280d;
+        background: #f3f6fa;
+        border: 2px solid #ff280d;
+        padding: 10px 20px;
+        margin-left: 10px;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      .btn-group .btn:hover {
+        background: #9300e6;
+        color: white;
+        border-color: #9300e6;
+      }
+
+      /* Footer Section */
+      footer {
+        text-align: center;
+        margin-top: 50px;
+        padding: 10px 0;
+        background: #ff280d;
+        color: white;
+        font-size: 1rem;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 1024px) {
+        .features {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .feature-text {
+          margin: 0 0 20px;
+        }
+
+        .feature-image {
+          margin-top: 20px;
+        }
+
+        .btn-group {
+          text-align: center;
+        }
       }
     </style>
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
+    <!-- Header -->
+    <header>
+      Symptoms Quiz
+    </header>
 
-    <section>
-      <nav>
-	<header>
-	  <p>Symptoms Quiz</p>
-	</header>
-	<br>
-	<br>
-	<p>We are here to help you with <br>your health!</p>
-	<p style="color: black; font-size: 40px;">Bedridden and cannot go to the doctor? Take our quiz to see what is causing it. We care for your health!</p>
-	<p style="text-align: center;"><a href="Quiz/index.html"><button class="button">Get Started</button></a></p>
-      </nav>
+    <!-- Navigation Section -->
+    <nav>
+      <p>We are here to help you with your health!</p>
+      <p>
+        Bedridden and cannot go to the doctor? Take our quiz to see what might
+        be causing it. We care for your health!
+      </p>
+      <a href="Quiz/index.html" class="cta-button">Get Started</a>
+    </nav>
 
-      <article>
-	<a href="https://github.com/CSAllenISD/2023-ISP-SymptomsQuiz"><button class="btn git">GitHub</button></a> 
-	<a href="ourteam.html"><button class="btn team">Our Team</button></a>
-	<a href="aboutus.html"><button class="btn aboutus"; >About Us</button></a>
+    <!-- Features Section -->
+    <section class="features">
+      <!-- Text Content -->
+      <div class="feature-text">
+        <div class="feature">
+          <i class="fas fa-heartbeat"></i>
+          <h3>Health Insights</h3>
+          <p>
+            Get tailored insights into potential health concerns based on your
+            symptoms.
+          </p>
+        </div>
+        <div class="feature">
+          <i class="fas fa-stethoscope"></i>
+          <h3>Expert Guidance</h3>
+          <p>
+            Our tool is built with medical professionals' input to help guide
+            you safely.
+          </p>
+        </div>
+        <div class="feature">
+          <i class="fas fa-users"></i>
+          <h3>Community Support</h3>
+          <p>
+            Join a community of people who care about your well-being and share
+            similar experiences.
+          </p>
+        </div>
+      </div>
 
-	<br>
-	<br>
-	<br>
-	<br>
-	
-	<pic>
-	<p><img src="https://images.pexels.com/photos/3683088/pexels-photo-3683088.jpeg" width="800" height="1000"></p>
-	</pic>
-	
-      </article>
+      <!-- Image Content -->
+      <div class="feature-image">
+        <img
+          src="https://images.pexels.com/photos/3683088/pexels-photo-3683088.jpeg"
+          alt="Health and Wellness"
+        />
+      </div>
     </section>
 
+    <!-- Button Group Section -->
+    <div class="btn-group">
+      <a href="https://github.com/CSAllenISD/2023-ISP-SymptomsQuiz" class="btn">GitHub</a>
+      <a href="ourteam.html" class="btn">Our Team</a>
+      <a href="aboutus.html" class="btn">About Us</a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      &copy; 2023 Symptoms Quiz | All Rights Reserved
+    </footer>
   </body>
 </html>
-
