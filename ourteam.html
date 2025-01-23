@@ -2,154 +2,183 @@
 <html lang="en">
   <head>
     <title>Our Team</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style>
+      /* Global Reset */
       * {
-	  box-sizing: border-box;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
       }
 
       body {
-	  background-color: white;
-	  text-align: center;
-	  line-height: 2;
+        font-family: "Arial", sans-serif;
+        background: linear-gradient(135deg, #e8f1f8, #fdfdfd);
+        color: #333;
+        line-height: 1.6;
+        margin: 0;
+        text-align: center;
       }
 
       header {
-	  float: left;
-	  width: 50%;
-	  background-color: #c2dbf4ff;
-	  padding: 30px;
+        background: linear-gradient(to right, #ff280d, #ff6b6b);
+        color: white;
+        padding: 20px 0;
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 20px;
       }
 
-      nav {
-	  float: right;
-	  width: 50%;
-	  background-color: #c2dbf4ff;
-	  padding: 30px;
+      /* Navigation Bar */
+      .nav-bar {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-bottom: 20px;
       }
 
+      .nav-bar a {
+        text-decoration: none;
+      }
+
+      .nav-bar .nav-btn {
+        font-size: 1rem;
+        font-weight: bold;
+        color: #ff280d;
+        background: white;
+        padding: 10px 20px;
+        border: 2px solid #ff280d;
+        border-radius: 25px;
+        transition: all 0.3s ease;
+      }
+
+      .nav-bar .nav-btn:hover {
+        background: #9300e6;
+        color: white;
+        border-color: #9300e6;
+      }
+
+      /* Main Content */
       article {
-	  margin: 20px;
-	  text-align: center;
-	  padding: 20px;
-	  font-size: 20px;
-	  font-family: Verdana, sans-serif;
-      }
-      
-      .button {
-	  border: none;
-	  background-color: #c2dbf4ff;
-	  height: 90px;
-	  padding: 14px 28px;
-	  font-size: 35px;
-	  cursor: pointer;
-	  display: inline-block;
-	  float: left;
-	  padding: 3px;
-      }
-      
-      .btn {
-	  border: none;
-	  padding: 3px;
-	  background-color: #c2dbf4ff;
-	  height: 90px;
-	  padding: 14px 28px;
-	  font-size: 35px;
-	  cursor: pointer;
-	  display: inline-block;
-	  float: right;
+        margin: 20px auto;
+        width: 80%;
+        background: white;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: left;
       }
 
-      /*Create buttons to for other pages */
-      .homepage {
-	  color: #ff280d;
+      article h1 {
+        font-size: 2.5rem;
+        color: #ff280d;
+        margin-bottom: 20px;
+        text-align: center;
       }
 
-      .homepage:hover {
-	  background-color: purple;
-	  transition-duration: 0.4s;
-	  color: white;
-	  cursor: pointer;
+      article h2 {
+        font-size: 1.5rem;
+        color: #333;
+        margin-bottom: 10px;
+        text-decoration: underline;
       }
 
-      .git {
-	  color: #ff280d;
+      article p {
+        font-size: 1rem;
+        color: #666;
+        margin-bottom: 20px;
+        line-height: 1.8;
       }
-      
-      .git:hover {
-	  background-color: purple;
-	  transition-duration: 0.4s;
-	  color: white;
-	  cursor: pointer;
+
+      hr {
+        border: 0;
+        height: 3px;
+        width: 75%;
+        background: #ffab40;
+        margin: 30px auto;
       }
-      
-      
-      .aboutus {
-	  color: #ff280d;
+
+      /* Footer */
+      footer {
+        margin-top: 30px;
+        background: #ff280d;
+        color: white;
+        padding: 10px 0;
+        font-size: 1rem;
       }
-      
-      .aboutus:hover {
-	  background-color: purple;
-	  transition-duration: 0.4s;
-	  color: white;
-	  cursor: pointer;
+
+      /* Responsive Design */
+      @media (max-width: 1024px) {
+        .nav-bar {
+          flex-direction: column;
+          gap: 10px;
+        }
+
+        article {
+          width: 90%;
+        }
       }
-      
-      .quiz {
-	  color: #ff280d;    
-      }
-      
-      .quiz:hover {
-	  background-color: purple;
-	  transition-duration: 0.4s;
-	  cursor: pointer;  
-	  color: white;
-      }
-      
     </style>
   </head>
 
   <body>
-    <header>
-      <a href="Quiz/index.html"><button class="button quiz">Symptoms Quiz</button></a>
-    </header>
+    <!-- Header -->
+    <header>Our Team</header>
 
-    <nav>
-      <a href="https://github.com/CSAllenISD/2023-ISP-SymptomsQuiz"><button class="btn git">GitHub</button></a>
-      <a href="aboutus.html"><button class="btn aboutus">About Us</button></a>
-      <a href="index.html"><button class="btn homepage">Home Page</button></a>
-    </nav>
-    <br>
-    <br>
-    <br>
-    <br>    
+    <!-- Navigation Bar -->
+    <div class="nav-bar">
+      <a href="Quiz/index.html" class="nav-btn">Symptoms Quiz</a>
+      <a href="https://github.com/CSAllenISD/2023-ISP-SymptomsQuiz" class="nav-btn">GitHub</a>
+      <a href="aboutus.html" class="nav-btn">About Us</a>
+      <a href="index.html" class="nav-btn">Home Page</a>
+    </div>
+
+    <!-- Main Content -->
+    <article>
+      <h1>Meet the Team</h1>
+
+      <section>
+        <h2>Tejasvi Gutta</h2>
+        <p>
+          Tejasvi Gutta is our team's project manager as well as one of our main software engineers. She created the idea and ensures everything gets done on schedule.
+        </p>
+      </section>
+      <hr />
+
+      <section>
+        <h2>Andrew Nguyen</h2>
+        <p>
+          Andrew Nguyen is our product manager and a software engineer. He worked on the basic design for the website as well as the quizzes.
+        </p>
+      </section>
+      <hr />
+
+      <section>
+        <h2>Melanie Lopez-de-Nava-Reza</h2>
+        <p>
+          Melanie is the QA engineer on our team. She worked on the flowchart as well as other non-coding-related components.
+        </p>
+      </section>
+      <hr />
+
+      <section>
+        <h2>Shreya Kumar</h2>
+        <p>
+          Shreya is a software engineer in the team. She worked on the finer design details of the website, as well as the flowchart and advertisement.
+        </p>
+      </section>
+      <hr />
+
+      <section>
+        <h2>Preston Nguyen</h2>
+        <p>
+          Preston is the release engineer on our team. He contributed to the website's design and created an additional advertisement.
+        </p>
+      </section>
+    </article>
+
+    <!-- Footer -->
+    <footer>&copy; 2023 Symptoms Quiz Team. All Rights Reserved.</footer>
   </body>
-  <article>
-    <p style="font-size: 27px;"><b>Our Team</b></p>
-    <p style="font-size: 20px; margin-left: 10%; margin-right: 10%;"><u>Tejasvi Gutta</u></p>
-    <p style="font-size: 15px; margin-left: 10%; margin-right: 10%;">Tejasvi Gutta is our teams project manager as well as one of our main software engineers. She created the idea, and makes sure everything gets done when it should.</p>
-  </article>
-  <hr style="width:75%; background-color:#ffab40; height: 4px; text-align: center;">
-  <article>
-    <p style="font-size: 20px; margin-left: 10%; margin-right: 10%;"><u>Andrew Nguyen</u></p>
-    <p style="font-size: 15px; margin-left: 10%; margin-right: 10%;">Andrew Nguyen is our product manager as well as a software engineer. He worked on the basic design for the website as well as the quizzes.</p>
-  </article>
-  <hr style="width:75%; background-color:#ffab40; height: 4px; text-align: center;">
-  <article>
-    <p style="font-size: 20px; margin-left: 10%; margin-right: 10%;"><u>Melanie Lopez-de-Nava-Reza</u></p>
-    <p style="font-size: 15px; margin-left: 10%; margin-right: 10%;">Melanie is the QA engineer in our team. She worked on the flowchart as well as some other non-coding related parts.</p>
-  </article>
-  <hr style="width:75%; background-color:#ffab40; height: 4px; text-align: center;">
-  <article>
-    <p style="font-size: 20px; margin-left: 10%; margin-right: 10%;"><u>Shreya Kumar</u></p>
-    <p style="font-size: 15px; margin-left: 10%; margin-right: 10%;">Shreya is a software engineer in the team. She worked on the smaller design details of the website, as well as the flowchart and advertisement.</p>
-  </article>
-  <hr style="width:75%; background-color:#ffab40; height: 4px; text-align: center;">
-  <article>
-    <p style="font-size: 20px; margin-left: 10%; margin-right: 10%;"><u>Preston Nguyen</u></p>
-    <p style="font-size: 15px; margin-left: 10%; margin-right: 10%;">Preston is the release engineer in our team. He worked on the design of the website as well as another advertisement.</p>
-  </article>
-  <hr style="width:75%; background-color:#ffab40; height: 4px; text-align: center;">
-
-    
+</html>
